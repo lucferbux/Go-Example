@@ -9,4 +9,4 @@
 
 # Quick start
 
-* Just run `go run .` to execute the program.
+* Just run `go run hello.go` to execute the program.
