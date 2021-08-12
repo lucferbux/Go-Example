@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-
 	"rsc.io/quote"
+	"github.com/lucferbux/Go-Example/strutil"
+	"github.com/lucferbux/Go-Example/mathutil"
 )
 
 type person struct {
