@@ -4,6 +4,6 @@ import (
 	"math/rand"
 )
 
-func getRandomNumber() int {
+func GetRandomNumber() int {
 	return rand.Intn(10)
 }

@@ -2,9 +2,12 @@ package main
 
 import (
 	"fmt"
+	"log"
+
+	"example.com/error"
+	"example.com/mathutil"
+	"example.com/strutil"
 	"rsc.io/quote"
-	"github.com/lucferbux/Go-Example/strutil"
-	"github.com/lucferbux/Go-Example/mathutil"
 )
 
 type person struct {
@@ -27,7 +30,7 @@ func main() {
 	forLoop()
 	enumerateArray(arrSlice)
 	enumerateMap(mapString)
-	result, err := mathutil.sqrt(16)
+	result, err := mathutil.Sqrt(16)
 
 	if err != nil {
 		fmt.Println(err)
@@ -36,14 +39,27 @@ func main() {
 	}
 
 	fmt.Println(p)
-	fmt.Println(mathutil.sum(2, 3))
+	fmt.Println(mathutil.Sum(2, 3))
 	fmt.Println(mapInt)
 	fmt.Println(arrSlice)
-	fmt.Println(mathutil.checkOdd(y))
+	fmt.Println(mathutil.CheckOdd(y))
 	fmt.Println(array5)
 	fmt.Println(array5init)
 	fmt.Println(x + y)
-	fmt.Println(strutil.reverse("hello"))
+	fmt.Println(strutil.Reverse("hello"))
+
+	fmt.Println("+++++++++++++")
+
+	message, err := error.Hello("Lucas")
+	// If an error was returned, print it to the console and
+	// exit the program.
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// If no error was returned, print the returned message
+	// to the console.
+	fmt.Println(message)
 }
 
 func arraySlice() []int {
