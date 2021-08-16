@@ -9,8 +9,8 @@ require (
 	rsc.io/quote v1.5.2
 )
 
-replace example.com/mathutil => ./mathutil
+replace example.com/mathutil => ../mathutil
 
-replace example.com/strutil => ./strutil
+replace example.com/strutil => ../strutil
 
-replace example.com/error => ./error
+replace example.com/error => ../error
